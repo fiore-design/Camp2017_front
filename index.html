@@ -12,81 +12,92 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="grid-container">
-      <div class="main-contener">
-        
-        <div class="row">
-          <!-- Left column -->
-          <div class="small-12 medium-3 columns"> 
-            <div class="logo-com">
-              <a href="/"><img src="img/efi-logo.png"></a>
-            </div>
-          </div>
+    <main>
+      <div class="grid-container">
+        <div class="main-contener">
           
-          <!-- Right column -->
-          <div class="small-12 medium-6 columns">
-            <div class="login-box"> 
-              <h1 class="login">Login</h1>
-              <p class="desc">Aby, zaimportować dane zaloguj się do swojego banku</p>
-
-              <div class="login-avatar"></div>
-
-              <div class="login-rounded-rectangle">
-                <form action="/" name="form">
-
-                  <div class="number-id">
-                    <p>1212132323</p>
-                    <div class="number-close">
-                      <a href=""><i class="step fi-x"></i></a>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="small-9 small-offset-1 columns">
-                      <input type="text" class="input-pass">
-                    </div>
-                    <div class="small-1">
-                      <i class="fa fa-keyboard-o icon-keyboard" aria-hidden="true"></i>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="small-10 small-offset-1 medium-6 medium-offset-3 text-center">
-                      <div class="text-center small">
-                        <a href="#" class="button btn-login btn-other">SELECT OTHER</a>
-                        <a href="#" class="button btn-login btn-go">GO</a>
+          <div class="row">
+            <!-- Left column -->
+            <div class="small-12 medium-3 columns"> 
+              <div class="logo-company">
+                <h1>
+                  <a href="#"><img src="img/efi-logo.png"></a>
+                </h1>
+              </div>
+            </div>
+            
+            <!-- right column -->
+            <div class="small-12 medium-6 columns">
+              <div class="login-box"> 
+                <h2 class="login">Login</h2>
+                <p class="desc">Aby, zaimportować dane zaloguj się do swojego banku</p>
+      
+                <div class="login-avatar"></div>
+      
+                <div class="login-rounded-rectangle">
+                  <form action="#" method="POST" name="form" novalidate>
+      
+                    <div class="number-id">
+                      <p>1212132323</p>
+                      <div class="number-close">
+                        <a href=""><i class="step fi-x"></i></a>
                       </div>
                     </div>
-                  </div>
-                  
-                </form>
+      
+                    <div class="row">
+                      <div class="small-9 small-offset-1 columns">
+                        <div class="wrapper-input">
+                          <input type="password" class="input-pass" autofocus>
+                          <div class="error-message-wrapper hide">
+                            <div class="triangle-up"></div>
+                            <div  data-alert class="error-message text-center">Błęde dane podane w formularzu</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-1">
+                        <i class="fa fa-keyboard-o icon-keyboard" aria-hidden="true"></i>
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="small-10 small-offset-1 medium-6 medium-offset-3 text-center">
+                        <div class="text-center buttons small">
+                          <a href="#" class="button btn-login btn-other">SELECT OTHER</a>
+                          <a href="#" id="submit" class="button btn-login btn-go submit">GO</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="small-6">
-                <ul class="menu align-left menu-bottom">
-                  <li><a href="#">SECURITY</a></li>
-                  <li><a href="#">LOGGIN IN</a></li>
-                  <li><a href="#">CONTACT</a></li>
-                </ul>
-              </div>
-              <div class="small-6">
-                <ul class="menu align-right menu-bottom">
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+      
+              <div class="row">
+                <div class="small-6">
+                  <ul class="menu align-left menu-bottom">
+                    <li><a href="#">SECURITY</a></li>
+                    <li><a href="#">LOG IN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                  </ul>
+                </div>
+                <div class="small-6">
+                  <ul class="menu align-right menu-bottom">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </div><!-- end row -->
+      
+            </div><!--end right column -->
+          </div><!-- end row -->
+      
+        </div><!-- end main-contener -->
+      </div><!-- end grid-container -->
+    </main>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

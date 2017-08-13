@@ -16,7 +16,7 @@ $font-roboto-condensed: 'Roboto Condensed';
 	background-size: cover;
 }
 
-.logo-com {
+.logo-company {
 	width: 160px;
 	height: 160px;
 	border: 1px solid rgba(255, 255, 255, .3);
@@ -58,6 +58,8 @@ $font-roboto-condensed: 'Roboto Condensed';
 			color: #ffffff;
 			margin-left: auto;
 			margin-right: auto;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
 		.login-avatar {
@@ -72,7 +74,6 @@ $font-roboto-condensed: 'Roboto Condensed';
 		}
 
 		.login-rounded-rectangle {
-			height: 253px;
 			border: solid 1px #ffffff;
 			border-radius:5px;
 			margin-left: 28px;
@@ -115,45 +116,81 @@ $font-roboto-condensed: 'Roboto Condensed';
 					}
 				}
 			}
+
+			.wrapper-input {
+				
+				.error-message-wrapper {
+					// display: none;
+
+					.error-message {
+						min-height: 40px;
+						color: #ffffff;
+						font-size: 12px;
+						margin-bottom: 15px;
+						padding-top: 10px;						
+						background-color: #F04124;
+						border: 1px solid red;
+						border-radius: 5px;
+					}
+
+					.triangle-up {
+						width: 0;
+						height: 0;
+						margin-left: 50%;
+						border-left: 5px solid transparent;
+						border-right: 5px solid transparent;
+						border-bottom: 10px solid #F04124;
+					}
+				}
+				
+			}
 		  
 		  	.input-pass {
+		  		margin-bottom: 5px;
 		  		border-radius: 5px;
 		  	}
+
+		  	.error-input-pass {
+	  			border: 1px solid red;
+	  		}
 
 		  	.icon-keyboard {
 					font-size: 24px;
 					margin-top: 5px;
 				}
+			.buttons {
+				margin-top: 15px;
+				margin-bottom: 25px;
 
-		 	.btn-login {
-				width: 118px;
-				height: 31px;
-				padding-top: 8px;
-				border-radius:2px;
-				font-family: $font-roboto-condensed;
-			}
-
-			.btn-go {
-				background-color: #ffffff;
-				color: #7E7E7E;
-				font-weight: bold;
-				font-stretch: condensed;
-
-				transition-property: background;
-				transition-duration: 1s;
-				transition-timing-function: linear;
-
-				&:hover {
-					background: #ff7b29;
-					color: $font-color-white;
+				.btn-login {
+					width: 118px;
+					height: 31px;
+					padding-top: 8px;
+					border-radius:2px;
+					font-family: $font-roboto-condensed;
 				}
-			}
 
-			.btn-other {
-				background-color: rgba(0,0,0,0);
-				
-			}
-		
+				.btn-go {
+					background-color: #ffffff;
+					color: #7E7E7E;
+					font-weight: bold;
+					font-stretch: condensed;
+
+					transition-property: background;
+					transition-duration: 1s;
+					transition-timing-function: linear;
+
+					&:hover {
+						background: #ff7b29;
+						color: $font-color-white;
+					}
+				}
+
+				.btn-other {
+					background-color: rgba(0,0,0,0);
+					
+				}
+			}	
 		}
 }
 
