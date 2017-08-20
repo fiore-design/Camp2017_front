@@ -1,0 +1,254 @@
+$bg-color-black: #000000;
+
+.dashboard-header {
+	background-color: $primary-color;
+	height: 120px;
+
+	.header-left-box {
+		height: 120px;
+		// flex-basis: 300px;	
+		display: flex;
+		
+		align-items: center;
+
+		.logo-company-dash {
+			width:  80px;
+			height: 80px;
+			border-radius: 3px;
+			border: 1px solid rgba(255, 255, 255, .3); 
+			text-align: center;
+
+			display: flex;
+			flex-basis: 80px;
+			align-items: center;
+			justify-content: center;
+			
+			img {
+				max-width: 50px;
+				margin-left:15px;
+				margin-right: 15px;
+				display:flex;
+			}
+		}
+
+		.avatar-dash {
+
+			img {
+				display: block;
+				min-width: 60px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.user-info-dash {
+			margin-left: 22px;
+			display: flex;
+			flex-direction: column;
+
+			.login-name-dash {			
+
+				span {
+					font-family: $font-roboto-condensed;
+					font-size: 22px;
+					font-weight: 300;
+					color: $font-color-white;
+				}
+			}
+
+			.settings-box{
+				margin-top: 5px;
+
+				a {
+					color: $font-color-white;
+					font-size: 18px;
+					margin-right: 12px;
+				}
+			}
+		}	
+	}
+
+	.title-bar {
+		padding-left:0;
+		padding-right:0;
+	}
+
+	.menu-dash {
+		display: flex;
+		max-width: 450px;
+		flex-wrap: nowrap;
+		margin-left: 15px;
+		padding-left: 5px;
+
+			li {
+				height: 120px;
+				flex: 1;
+				display: flex;				
+			}
+
+			a {
+				color: #ffffff;
+				height: 100%;
+				width: 100%;
+				position: relative;
+				transition-property: background;
+				transition-duration: .1s;
+				transition-timing-function: linear;
+
+				display: flex;
+				align-items: center; 
+				justify-content: center;
+				flex-direction: column;
+
+				&:hover, &:active {
+					background-color: $bg-color-black;
+
+					&:after {
+						content: '';
+						width: 16px;
+						height: 16px;
+						display: block;
+						position: absolute;
+						left:50%;
+						margin-left: -8px;
+						bottom:-7px;
+
+						border-radius: 50%;
+						background-color: $bg-color-black;
+					}
+				}	
+			}
+
+			i {
+				display: flex;
+				align-items: center; 
+				justify-content: center;
+
+				margin-bottom: 15px;
+				width: 100%;
+				font-size: 27px;
+			}
+	}
+
+	.header-right-box {
+		height: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end; 
+
+		i {
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 27px;
+			color: #ffffff;
+			cursor: pointer ;
+
+			display: flex;
+			align-items: center;
+
+			&:nth-of-type(2) {
+				color: #e21a61;
+				text-shadow: 0px -2px 0 0 #000000;
+				margin-right: 0px;
+			}
+
+		}
+
+
+	}
+
+	.title-bar {
+		background: none;
+		align-items: center;
+		justify-content: center;
+
+		height: 100%;
+	}
+
+	
+}
+
+
+@media all and (max-width: 639px) {
+	.dashboard-header {
+		height: 62px;
+
+		.header-left-box {
+			height: 62px;
+			display: block;
+
+			.toggle-topbar.menu-icon span{
+				font-weight: bold;
+				font-size: 35px;
+				// height: 60px;
+			}
+
+			nav {
+				background-color: #000000;
+				padding-left: 10px;
+				width: 100%;
+				text-align: center;
+
+				.menu-dash-mobile {
+					width: 100%;
+					z-index: 10;
+					background-color: #000000;
+					position:absolute;
+					left: 0;
+
+					display: flex;
+					justify-content: center;
+
+					i {
+						margin-right: 5px;
+					}
+
+					a {
+						width: 100%;
+						height: 50px;
+						color: $font-color-white;
+
+						transition-property: background;
+						transition-duration: .1s;
+						transition-timing-function: linear;
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						&:hover {
+							opacity: 0.9;
+						}
+					}
+				}
+			}
+	 
+		}
+	}
+
+	.logo-company-dash-mobile {
+		height: 100%;
+
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		
+		img {
+			width: 50px;
+		}
+	}
+
+	.settings-box-mobile {
+		height: 100%;
+
+		display: flex;
+		align-items:center;
+		justify-content: center;
+
+		i {
+			color: $font-color-white;
+			font-size: 25px;
+		}
+	}	
+}
+
