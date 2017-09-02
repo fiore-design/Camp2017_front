@@ -1,0 +1,58 @@
+.radio_item {
+	display: none !important;
+}
+
+.type-transfer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+
+	label {
+		display: flex;
+		flex-direction: column;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-right: 16px;
+		align-items: center;
+	}
+
+	.radio-box {
+		
+		i {
+		 	width: 61px;
+		 	height: 61px;
+		 	background-color: #A0A0A0;
+		 	font-size: 25px;
+		 	color: #fff;
+		 	display: flex;
+		 	justify-content: center;
+		 	align-items: center; 
+		 	transition: .2s all;
+		}
+	}
+}
+
+.radio_item:checked + i {
+	background-color: $primary-color;
+}
+
+input[type="text"] {
+	font-size: 15px;
+  	font-weight: 300;
+	text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.11);
+	// border: 1px solid red;
+	border-radius: 3px;
+	background-color: #ffffff;
+	box-shadow: inset 0px 2px 3px 0 rgba(0, 0, 0, 0.1);
+	border: solid 1px #e3e3e3;
+}
+
+.recipient-list {
+	max-height: 50px;
+}
+
+.input-group-label {
+	background-color: #ffffff;
+	border: none;
+}

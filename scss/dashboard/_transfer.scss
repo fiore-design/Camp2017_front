@@ -1,0 +1,101 @@
+body {
+	background-color: #DADBDB;
+}
+
+.form-transfer {
+	background-color: #ffffff;
+	margin-top: 20px;
+	padding: 20px 20px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-family: $font-roboto-condensed;
+	font-stretch: condensed;
+
+	.nav-arrows {
+		margin-bottom: 10px;
+
+		i {
+			color: #DADBDB;
+			font-size: 30px;
+		}
+	}
+
+	.current-account {
+		margin-bottom: 20px;
+		padding: 10px;
+		border: solid 0.4px #DADBDB;
+		border-radius: 5px;
+
+		.current-account-left {
+			display: flex;
+			flex-direction: column;
+			
+			.fa-address-card {
+				display: block;
+				font-size: 30px;
+				color: #A0A0A0;
+				margin-left: 10px;
+				margin-right: 10px
+			}
+
+			span {
+				font-size: 18px;
+				font-weight: 300;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 10px;
+			}
+		}
+
+		.current-account-right {
+			h2 {
+				font-size: 40px;
+				font-weight: bold;
+				display: inline-block;
+			}
+			span { 
+				font-size: 40px;
+				font-weight: 300;
+			}
+
+			i {
+				font-size: 40px;
+				margin-left: 10px;
+				margin-right: 5px;
+				color: $primary-color;
+				opacity: .5;
+			}
+		}
+	}
+
+	.add-account {
+		margin-bottom: 15px;
+		font-size: 15px; 
+
+		a {
+			display: flex;
+			align-content: center;
+			font-weight: 300;
+			font-stretch: condensed;
+			line-height: 1.33;
+			text-align: left;
+			color: #000000;
+
+			span {
+				padding-top: 3px;
+			}
+
+			i {
+				font-size: 25px;
+				margin-right: 10px;
+				margin-bottom: 0;
+				color: #A0A0A0;
+			}
+		}		
+	}
+
+	form {
+		margin-left: 10px;
+		margin-right:30px;
+	}
+}
