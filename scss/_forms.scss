@@ -37,15 +37,14 @@
 	background-color: $primary-color;
 }
 
-input[type="text"] {
+input[type="text"], input[type="date"] {
 	font-size: 15px;
   	font-weight: 300;
 	text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.11);
-	// border: 1px solid red;
 	border-radius: 3px;
 	background-color: #ffffff;
 	box-shadow: inset 0px 2px 3px 0 rgba(0, 0, 0, 0.1);
-	border: solid 1px #e3e3e3;
+	// border: solid 1px #e3e3e3;
 }
 
 .recipient-list {
@@ -55,4 +54,17 @@ input[type="text"] {
 .input-group-label {
 	background-color: #ffffff;
 	border: none;
+}
+
+.valid {
+	border: solid 1px green;
+}
+
+.invalid {
+	border: solid 1px red;
+}
+
+.alert {
+	margin-top: 50px;
+	display: none;
 }

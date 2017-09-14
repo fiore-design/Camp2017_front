@@ -134,7 +134,7 @@
   						<!-- form -->
   						<div class="row">
   							<div class="small-12 columns">
-  								<form action="" method="POST">
+  								<form id="form" action="" method="POST" novalidate>
   									<div class="row align-middle">
   										<div class="small-12 medium-3 columns">
   											<label for="type-transfer">Type</label>
@@ -155,7 +155,7 @@
 															<!--RADIO 1-->
 															<label class="label_item" for="country">
 																<div class="radio-box">
-																	<input type="radio" class="radio_item" value="country" name="item" id="country">
+																	<input type="radio" class="radio_item" value="country" name="item" id="country" checked="checked">
 																	<i class="fa fa-film" aria-hidden="true"></i>
 																</div>
 															 	Country
@@ -213,7 +213,7 @@
   										</div>
   										<div class="small-12 medium-9 columns">
   											<div class="input-group">
-  												<input type="text" id="recipient" placeholder="Search for a recipient contractor or customer" list="recipient-list" class="input-group-field">
+  												<input type="text" id="recipient" placeholder="Search for a recipient contractor or customer" list="recipient-list" class="input-group-field" data-error-message="Wybierz odbiorcę" required>
   												<span class="fa fa-book input-group-label" aria-hidden="true"></span>
   											</div>
   											<datalist id="recipient-list" class="recipient-list">
@@ -240,7 +240,7 @@
   										<div class="small-12 medium-9 columns">
   											<fieldset class="">
 												<legend id="type-where"></legend>
-											    <input type="radio" name="type-where" value="account" id="account" required><label for="account">Account</label>
+											    <input type="radio" name="type-where" value="account" id="account" checked="checked"><label for="account">Account</label>
 											    <input type="radio" name="type-where" value="facebook" id="facebook"><label for="facebook">Facebook</label>
 											    <input type="radio" name="type-where" value="phone" id="phone"><label for="phone">Phone</label>
 											</fieldset>
@@ -252,7 +252,7 @@
   											<label for="number">Number</label>
   										</div>
   										<div class="small-12 medium-4 columns">
-  											<input type="text" id="number">
+  											<input type="text" id="number" data-error-message="Podaj 16 liczb numeru konta." pattern="[0-9]{16}" maxlength="16" required>
   										</div>
   									</div>
 
@@ -261,10 +261,10 @@
   											<label for="sum">Sum</label>
   										</div>
   										<div class="small-12 medium-3 columns">
-  											<input type="text" id="sum">
+  											<input type="text" id="sum" data-error-message="Podaj kwotę przelewu" pattern="([0-9])+[.]?[0-9]{2}" maxlength="9" required>
   										</div>
   										<div class="small-12 medium-1 columns">
-  											<input type="text" id="" value="PLN">
+  											<input type="text" id="" value="PLN" required>
   										</div>
   									</div>
 
@@ -273,7 +273,7 @@
   											<label for="when">When</label>
   										</div>
   										<div class="small-12 medium-2 columns">
-  											<input type="text" id="when">
+  											<input type="text" id="when" data-error-message="Podaj datę przelewu. Data nie może być wcześniejsza niż aktualna." data-date-input="date" required>
   										</div>
   									</div>
 
@@ -282,7 +282,7 @@
   											<label for="title">Title</label>
   										</div>
   										<div class="small-12 medium-9 columns">
-  											<input type="text" id="title">
+  											<input type="text" id="title" data-error-message="Podaj swoje Tytuł przelewu. Użyj małych i dużych liter. Minimalna długość znaków 3, maksymalna 20." pattern="[a-ząęłóśćżźA-ZĄĘŁÓŚĆŻŹ]{3,20}" maxlength="35" required>
   										</div>
   									</div>
 
@@ -293,7 +293,7 @@
   										<div class="small-12 medium-9 columns">
   											<fieldset class="">
 												<legend id="type-of-transfer""></legend>
-											    <input type="radio" name="type-of-transfer"" value="normaly" id="normaly" required>
+											    <input type="radio" name="type-of-transfer"" value="normaly" id="normaly">
 											    <label for="normaly"><strong>Normaly</strong><small> about 2 days</small></label>
 											    <input type="radio" name="type-of-transfer"" value="elixir" id="elixir"><label for="elixir">Elixir</label>
 											    <input type="radio" name="type-of-transfer"" value="sorbnet" id="sorbnet"><label for="sorbnet">Sorbnet</label>
@@ -307,6 +307,16 @@
   										</div>
   										<div class="small-12 medium-9 columns">
   											<input type="submit" id="submit" class="button" value="CONTINUE">
+  										</div>
+  									</div>
+
+  									<div class="row">
+  										<div class="small-12 columns">
+  											<div id="alert">
+  												<ol id="errors-info">
+								                    
+								                </ol>
+  											</div>
   										</div>
   									</div>
 
